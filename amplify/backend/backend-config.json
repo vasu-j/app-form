@@ -1,0 +1,53 @@
+{
+	"storage": {
+		"mydatabase": {
+			"service": "DynamoDB",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"function": {
+		"myapi": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [
+				{
+					"category": "storage",
+					"resourceName": "mydatabase",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			]
+		}
+	},
+	"auth": {
+		"cognito4fd35965": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"api": {
+		"myapi": {
+			"service": "API Gateway",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "myapi",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			]
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

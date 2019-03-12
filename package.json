@@ -9,9 +9,11 @@
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
+    "aws-amplify": "^1.1.22",
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
     "babel-loader": "7.1.1",

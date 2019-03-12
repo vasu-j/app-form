@@ -1,0 +1,36 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "myapi",
+            "privacy": {
+                "protected": true,
+                "auth": "rw",
+                "unauth": "rw"
+            }
+        }
+    ],
+    "resourceName": "myapi",
+    "apiName": "myapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "myapi"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 1,
+        "authRoleName": "form-app-20190313011603-authRole",
+        "unAuthRoleName": "form-app-20190313011603-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "myapi",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

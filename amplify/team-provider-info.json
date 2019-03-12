@@ -1,0 +1,19 @@
+{
+    "test": {
+        "awscloudformation": {
+            "AuthRoleName": "form-app-20190313011603-authRole",
+            "UnauthRoleArn": "arn:aws:iam::247513440085:role/form-app-20190313011603-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::247513440085:role/form-app-20190313011603-authRole",
+            "Region": "ap-southeast-1",
+            "DeploymentBucketName": "form-app-20190313011603-deployment",
+            "UnauthRoleName": "form-app-20190313011603-unauthRole",
+            "StackName": "form-app-20190313011603",
+            "StackId": "arn:aws:cloudformation:ap-southeast-1:247513440085:stack/form-app-20190313011603/e6b84080-44f2-11e9-94cd-0200beb62082"
+        },
+        "categories": {
+            "auth": {
+                "cognito4fd35965": {}
+            }
+        }
+    }
+}
