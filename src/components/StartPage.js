@@ -1,32 +1,11 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import Amplify, { Analytics, Storage, API, graphqlOperation } from 'aws-amplify';
+
 
 class StartPage extends React.Component {
 
     handleOnClick = () => {
         return this.props.history.push('/login')
-    }
-
-    post = async () => {
-        console.log('calling api');
-        const response = await API.post('myapi', '/items', {
-          body: {
-            id: '1',
-            name: 'hello amplify!'
-          }
-        });
-        alert(JSON.stringify(response, null, 2));
-    }
-    get = async () => {
-        console.log('calling api');
-        const response = await API.get('myapi', '/items/object/1');
-        alert(JSON.stringify(response, null, 2));
-    }
-    list = async () => {
-        console.log('calling api');
-        const response = await API.get('myapi', '/items/1');
-        alert(JSON.stringify(response, null, 2));
     }
 
     render() {

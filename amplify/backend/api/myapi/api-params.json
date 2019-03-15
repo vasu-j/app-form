@@ -2,7 +2,7 @@
     "paths": [
         {
             "name": "/items",
-            "lambdaFunction": "myapi",
+            "lambdaFunction": "mylambda",
             "privacy": {
                 "protected": true,
                 "auth": "rw",
@@ -14,7 +14,7 @@
     "apiName": "myapi",
     "functionArns": [
         {
-            "lambdaFunction": "myapi"
+            "lambdaFunction": "mylambda"
         }
     ],
     "privacy": {
@@ -26,7 +26,7 @@
     "dependsOn": [
         {
             "category": "function",
-            "resourceName": "myapi",
+            "resourceName": "mylambda",
             "attributes": [
                 "Name",
                 "Arn"

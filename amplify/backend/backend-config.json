@@ -20,6 +20,21 @@
 					]
 				}
 			]
+		},
+		"mylambda": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [
+				{
+					"category": "storage",
+					"resourceName": "mydatabase",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			]
 		}
 	},
 	"auth": {

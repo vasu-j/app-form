@@ -15,15 +15,15 @@
         },
     
     
-          "functionmyapiName": {
+          "functionmylambdaName": {
             "Type": "String",
-            "Default": "functionmyapiName"
+            "Default": "functionmylambdaName"
           },
         
           
-          "functionmyapiArn": {
+          "functionmylambdaArn": {
             "Type": "String",
-            "Default": "functionmyapiArn"
+            "Default": "functionmylambdaArn"
           }
         
           
@@ -375,7 +375,7 @@
                             
                             {
                                 
-                                "Ref": "functionmyapiArn"
+                                "Ref": "functionmylambdaArn"
                             },
                             
                             "/invocations"
@@ -480,7 +480,7 @@
                           
                           {
                             
-                            "Ref": "functionmyapiArn"
+                            "Ref": "functionmylambdaArn"
                           },
                           
                           "/invocations"
@@ -537,12 +537,12 @@
                   
         
         
-        "functionmyapiPermissionmyapi": {
+        "functionmylambdaPermissionmyapi": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
                 "FunctionName": 
                     {
-                        "Ref":  "functionmyapiName"
+                        "Ref":  "functionmylambdaName"
                     },
                     
                     "Action": "lambda:InvokeFunction",
